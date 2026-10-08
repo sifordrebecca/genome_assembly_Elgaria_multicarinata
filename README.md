@@ -130,8 +130,6 @@ fasterq-dump SRR19179399 \
     --outdir /data/Wilson_Lab/projects/Group_Genome_Assembly/Elgaria_multicarinata/dovetail
 ```
 
-The resulting FASTQ files were compressed with `pigz` and renamed using the R1/R2 naming convention.
-
 Final files:
 
 ```text
@@ -143,7 +141,7 @@ SRR19179399_R2.fastq.gz
 
 ---
 
-## Read-count validation
+## Read-count validation + Concat
 
 | SRA run | R1 reads | R2 reads |
 |---|---:|---:|
@@ -156,11 +154,10 @@ Total number of read pairs across both runs:
 253,524,730
 ```
 
----
+Combining Dovetail / Omni-C runs
 
-## Combining Dovetail / Omni-C runs
+These were two runs of the same library for the same sample. The two SRA runs were combined so that scaffolding can be done with a single R1 file and a single R2 file.
 
-The two SRA runs were combined so that downstream scaffolding software can use a single R1 file and a single R2 file.
 
 R1 files were concatenated with:
 
@@ -193,7 +190,7 @@ Elgaria_dovetail_R1.fastq.gz
 Elgaria_dovetail_R2.fastq.gz
 ```
 
-The original SRA-specific FASTQ files are being retained for provenance and troubleshooting.
+The original SRA-specific FASTQ files are being retained for now.
 
 ---
 
