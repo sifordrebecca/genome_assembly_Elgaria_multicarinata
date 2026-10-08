@@ -49,7 +49,7 @@ https://genomeark.s3.amazonaws.com/index.html?prefix=species/Elgaria_multicarina
 
 ### Download
 
-The PacBio HiFi files were downloaded recursively from GenomeArk using the AWS CLI.
+The PacBio HiFi files were downloaded recursively from GenomeArk using the AWS.
 
 ```bash
 module load aws
@@ -67,10 +67,10 @@ Downloaded PacBio HiFi file:
 SRR19179400.hifi_reads.fastq.gz
 ```
 
-AWS CLI version:
+AWS version:
 
 ```text
-aws-cli/2.15.26
+aws/2.15.26
 ```
 
 ---
