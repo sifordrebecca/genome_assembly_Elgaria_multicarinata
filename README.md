@@ -94,41 +94,14 @@ module load sratoolkit/3.4.0
 
 Because this Biowulf module requires local scratch space, jobs were run with `/lscratch` allocated through Slurm.
 
-Example interactive:
-
-```bash
-sinteractive \
-    --cpus-per-task=8 \
-    --mem=32g \
-    --gres=lscratch:200
-```
 
 ### Downloading the SRA runs
+See download.dovetail.sh
 
-The two SRA runs were retrieved with:
-
-```bash
-prefetch SRR19179398
-prefetch SRR19179399
-```
+The two SRA runs were retrieved with prefetch
 
 Each run was then converted into paired-end FASTQ files using `fasterq-dump`.
 
-```bash
-fasterq-dump SRR19179398 \
-    --split-files \
-    --threads $SLURM_CPUS_PER_TASK \
-    --temp /lscratch/$SLURM_JOB_ID \
-    --outdir /data/Wilson_Lab/projects/Group_Genome_Assembly/Elgaria_multicarinata/dovetail
-```
-
-```bash
-fasterq-dump SRR19179399 \
-    --split-files \
-    --threads $SLURM_CPUS_PER_TASK \
-    --temp /lscratch/$SLURM_JOB_ID \
-    --outdir /data/Wilson_Lab/projects/Group_Genome_Assembly/Elgaria_multicarinata/dovetail
-```
 
 Final files:
 
