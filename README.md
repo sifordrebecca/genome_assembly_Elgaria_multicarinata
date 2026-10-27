@@ -199,7 +199,7 @@ Elgaria_multicarinata/
 
 ## Next steps
 
-- Perform QC of the PacBio HiFi data
+- Perform QC of the PacBio HiFi data - completed
 - Perform long-read genome assembly
 - Evaluate assembly quality
 - Use the combined Dovetail/Omni-C reads for scaffolding
