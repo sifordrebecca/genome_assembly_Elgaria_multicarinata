@@ -182,9 +182,24 @@ Elgaria_multicarinata/
 │   ├── SRR19179399_R2.fastq.gz
 │   ├── Elgaria_dovetail_R1.fastq.gz
 │   └── Elgaria_dovetail_R2.fastq.gz
+├── qc/
+│   ├── readme_qc.txt
+|   ├── fastqc/
+│   ├── multiqc/
+│   │   └── Elgaria_multicarinata_multiqc.html
+│   ├── seqkit/
+│   │   └── seqkit_stats.tsv
+│   └── jellyfish/
+│       └── Elgaria_k21.histo
+├── assembly/
+│   └── hifiasm/
+│       ├── hifiasm.sh
+│       ├── Elgaria_11-03-26.asm.hic.hap1.p_ctg.gfa
+│       ├── Elgaria_11-03-26.asm.hic.hap2.p_ctg.gfa
+│       ├── Elgaria_11-03-26.asm.hic.hap1.p_ctg.fa
+│       └── Elgaria_11-03-26.asm.hic.hap2.p_ctg.fa
 └── readme.txt
 ```
-
 ---
 
 ## Data summary
@@ -200,7 +215,7 @@ Elgaria_multicarinata/
 ## Next steps
 
 - Perform QC of the PacBio HiFi data - completed
-- Perform long-read genome assembly
+- Perform long-read genome assembly - completed 
 - Evaluate assembly quality
 - Use the combined Dovetail/Omni-C reads for scaffolding
 - Evaluate the scaffolded assembly
